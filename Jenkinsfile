@@ -21,7 +21,7 @@ podTemplate(
         }
         stage('packaing'){
             container('maven'){
-                sh 'export MAVEN_OPTS=-Xmx300m; mvn clean jib:build -Dimage.tag=$BUILD_NUMBER'
+                sh 'export MAVEN_OPTS=-Xmx300m; mvn clean compile jib:build -Dimage.tag=$BUILD_NUMBER'
             }
         }
     }
