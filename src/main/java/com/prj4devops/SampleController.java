@@ -10,7 +10,7 @@ import java.util.Map;
 @RestController
 public class SampleController {
 
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String hello(HttpServletRequest request){
         String result = "src: "+request.getRemoteAddr()+" / dest: "+request.getServerName()+"\n";
         return result;
